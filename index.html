@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+<div id="container"> <!-- container -->
+
+    <h1 id="header">Calculator</h1>
+
+    <div id="inner"> <!-- inner -->
+        <div id="section1">
+            <label for="firstNumber">First number</label>
+            <input type="number" id="firstNumber" placeholder="3">
+        </div>
+
+        <div id="section2">
+            <label for="secondNumber">Second number</label>
+            <input type="number" id="secondNumber" placeholder="4">
+        </div>
+    </div> <!-- inner -->
+
+    <div id="operator">
+        <button id="add" value="+">+</button>
+        <button id="subtract" value="-">-</button>
+        <button id="multiply" value="*">*</button>
+        <button id="divide" value="/">/</button>
+
+    </div>
+
+    <div id="result-box">
+        <p class="text">Result</p>
+        <p id="result"></p>
+    </div>
+</div>  <!-- container -->
+
+</body>
+</html>
