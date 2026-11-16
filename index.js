@@ -19,6 +19,11 @@ const buttons = document.querySelectorAll("button");
 let text = document.querySelector("#result");
 buttons.forEach(button => {
     button.addEventListener("click", (event) => {
+        if (button.id === 'clear') return;
+        if (firstInput.value === '' || secondInput.value === '') {
+            return;
+        }
+
         result = operate(first, event.target.value, second)
         console.log(result)
         text.innerHTML = `${result}`
@@ -30,20 +35,17 @@ buttons.forEach(button => {
 })
 
 
-function operate(x, operator, y) {
-    if (operator === "+") {
-        return add(x, y);
-    }
-    if (operator === "-") {
-        return subtract(x, y);
-    }
-    if (operator === "*") {
-        return multiply(x, y);
-    }
-    if (operator === "/") {
-        return divide(x, y);
-    }
-}
+
+const clearBtn = document.querySelector("#clear");
+clearBtn.addEventListener("click", () => {
+    firstInput.value = "";
+    secondInput.value = "";
+    first = 0;
+    second = 0;
+    text.innerHTML = "";
+    text.style.empty()
+});
+
 
 
 function add(a, b) {
@@ -57,4 +59,18 @@ function multiply(a, b) {
 }
 function divide(a, b) {
     return a / b;
+}
+function operate(x, operator, y) {
+    if (operator === "+") {
+        return add(x, y);
+    }
+    if (operator === "-") {
+        return subtract(x, y);
+    }
+    if (operator === "*") {
+        return multiply(x, y);
+    }
+    if (operator === "/") {
+        return divide(x, y);
+    }
 }

@@ -13,6 +13,7 @@ body {
     height: 420px;
     border-radius: 12px;
     padding: 20px;
+    box-shadow: #757575 4px 3px 5px;
 
 }
 
@@ -52,7 +53,15 @@ input {
     margin-top: 20px;
     justify-content: center;
     display: flex;
-    gap: 22px;
+    gap: 16px;
+}
+#clear {
+    color: #e5806f;
+    border-color: #5a3a35;
+}
+#clear:hover {
+    background: #2a1a18;
+    border-color: #e5806f;
 }
 
 button {
@@ -156,7 +165,3 @@ input[type=number] {
     overflow-x: auto;
 }
 
-#result:empty::before {
-    content: "0";
-    color: #484847;
-}
