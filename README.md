@@ -20,3 +20,6 @@ A basic web-based calculator built as the final project for [The Odin Project](h
 1. Clone the repository:
    ```bash
    git clone [https://github.com/Kerem24/calculator-project.git](https://github.com/Kerem24/calculator-project.git)
+   ```
+
+   Live Preview: https://kerem24.github.io/calculator-project/
